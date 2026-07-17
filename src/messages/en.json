@@ -409,7 +409,7 @@
     "businessEmailTitle": "Sales Notification",
     "businessBadge": "Ecommerce Sale",
     "businessTitle": "New sale registered",
-    "businessDescription": "Payment for order <strong>#{orderId}</strong> has been received and confirmed. Please proceed with the preparation of the corresponding shipment.",
+    "businessDescription": "Payment for order #{orderId} has been received and confirmed. Please proceed with the preparation of the corresponding shipment.",
     "businessCustomerDetails": "Customer and Delivery Details",
     "businessCustomerName": "Customer Name",
     "businessContactEmail": "Contact Email",

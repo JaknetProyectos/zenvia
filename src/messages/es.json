@@ -409,7 +409,7 @@
     "businessEmailTitle": "Notificación de Venta",
     "businessBadge": "Venta Ecommerce",
     "businessTitle": "Nueva venta registrada",
-    "businessDescription": "Se ha recibido y confirmado el pago de la orden <strong>#{orderId}</strong>. Por favor, procede con la preparación del envío correspondiente.",
+    "businessDescription": "Se ha recibido y confirmado el pago de la orden #{orderId}. Por favor, procede con la preparación del envío correspondiente.",
     "businessCustomerDetails": "Detalle del Cliente y Entrega",
     "businessCustomerName": "Nombre del Cliente",
     "businessContactEmail": "Email de Contacto",
