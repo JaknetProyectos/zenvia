@@ -1,0 +1,376 @@
+{
+  "header": {
+    "logoAlt": "Emblema",
+    "titleAlt": "Banner",
+    "cart": "Cesta",
+    "openMenu": "Ver menú",
+    "closeMenu": "Ocultar menú",
+    "nav": {
+      "home": "Principal",
+      "about": "Nosotros",
+      "store": "Catálogo",
+      "contact": "Escríbenos"
+    }
+  },
+  "cartPage": {
+    "breadcrumb": {
+      "home": "Principal",
+      "summary": "1. Artículos",
+      "shippingPayment": "2. Envío y Formas de Pago"
+    },
+    "success": {
+      "title": "¡Compra Realizada con Éxito!",
+      "description": "Su pago fue aceptado. La preparación de sus materiales médicos ha iniciado para su posterior envío.",
+      "paymentReference": "Código de Pago:",
+      "paidAmount": "Total Pagado:",
+      "transactionStatus": "Estado del Trámite:",
+      "approved": "ACEPTADA",
+      "backToCatalog": "Volver al Catálogo"
+    },
+    "empty": {
+      "title": "Tu bolsa de compras está vacía",
+      "description": "No se encontraron materiales médicos seleccionados en tu sesión de hoy.",
+      "goToStore": "Ver Catálogo"
+    },
+    "order": {
+      "title": "Artículos en tu pedido",
+      "clear": "Borrar Productos"
+    },
+    "financial": {
+      "title": "Resumen de Cuenta",
+      "couponPlaceholder": "Cupón de descuento",
+      "applyCoupon": "Validar",
+      "appliedCoupon": "Descuento {code} (-{discount}%)",
+      "remove": "Eliminar",
+      "couponInvalid": "El código de descuento no es correcto o ya caducó.",
+      "subtotal": "Costo de Materiales:",
+      "discount": "Rebaja Aplicada:",
+      "netTotal": "Total Neto a Pagar:",
+      "tax": "IVA {tax}"
+    },
+    "actions": {
+      "proceedToPayment": "Ir a Pagar",
+      "processing": "Verificando fondos mediante Keycop...",
+      "payAmount": "Pagar {amount}",
+      "backToCart": "Editar pedido / Poner código"
+    },
+    "errors": {
+      "declined": "La operación fue rechazada por el banco de tu tarjeta.",
+      "connection": "Hubo un problema de conexión con la plataforma de pagos."
+    },
+    "metadata": {
+      "couponApplied": "Código de descuento ingresado",
+      "standardSale": "Compra digital regular"
+    },
+    "form": {
+      "buyerTitle": "Datos del Cliente / Factura",
+      "addressTitle": "Datos de Envío y Entrega",
+      "paymentTitle": "Zona de Pago Protegida",
+      "firstName": "Nombre *",
+      "lastName": "Apellidos *",
+      "email": "Correo electrónico *",
+      "phone": "Teléfono Celular (10 números) *",
+      "company": "Nombre de la Empresa / Clínica o Consultorio (Opcional)",
+      "streetAddress": "Calle, Número Exterior e Interior *",
+      "streetAddressPlaceholder": "Avenida Universidad 450, Depto 4",
+      "neighborhood": "Colonia / Indicaciones para llegar (Opcional)",
+      "neighborhoodPlaceholder": "Colonia Vértiz Narvarte",
+      "city": "Alcaldía o Municipio *",
+      "state": "Estado *",
+      "statePlaceholder": "Ciudad de México",
+      "postalCode": "Código Postal *",
+      "country": "País",
+      "mexico": "México (MX)",
+      "cardNumber": "Dígitos de la Tarjeta (Visa / Mastercard) *",
+      "cardNumberPlaceholder": "4152 0000 0000 0000",
+      "cardHolderName": "Nombre en la Tarjeta *",
+      "cardHolderPlaceholder": "Como viene escrito",
+      "expiryMonth": "Mes de Vencimiento (MM) *",
+      "expiryMonthPlaceholder": "05",
+      "expiryYear": "Año de Vencimiento (AAAA) *",
+      "expiryYearPlaceholder": "2029",
+      "cvv": "Código de Seguridad (CVV) *",
+      "cvvPlaceholder": "•••"
+    },
+    "security": {
+      "note": "Operación protegida con altas medidas de seguridad"
+    },
+    "images": {
+      "octanoAlt": "Keycop",
+      "securePaymentAlt": "Pago protegido"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Encontremos el material ideal para tu negocio.",
+      "description": "Nuestro personal te ayudará con presupuestos, soporte técnico, disponibilidad de piezas y una atención detallada para tu negocio."
+    },
+    "info": {
+      "visit": {
+        "title": "Visita nuestras oficinas",
+        "subtitle": "Matriz",
+        "address1": "Avenida Jaime Balmes 11,",
+        "address2": "Depto 15A Edificio A Piso 1",
+        "address3": "Colonia Polanco I Sección",
+        "address4": "Alcaldía Miguel Hidalgo",
+        "address5": "Código Postal 11510, CDMX"
+      },
+      "call": {
+        "title": "Por teléfono",
+        "subtitle": "Atención personalizada"
+      },
+      "email": {
+        "title": "Correo electrónico",
+        "subtitle": "Respuesta veloz"
+      }
+    },
+    "form": {
+      "title": "Escríbenos un mensaje",
+      "description": "Explícanos qué necesitas y nuestro equipo te responderá con un costo estimado o la ayuda que requieres.",
+      "fullName": "Nombre completo",
+      "fullNamePlaceholder": "Pon tu nombre",
+      "email": "Correo de contacto",
+      "emailPlaceholder": "usuario@correo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "¿Cómo te podemos ayudar?",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando correo..."
+    },
+    "success": {
+      "title": "¡Mensaje recibido!",
+      "description": "Agradecemos tu interés. Nuestro personal revisará tu nota y te responderá muy pronto."
+    },
+    "errors": {
+      "unexpected": "Hubo un problema inesperado al guardar tus datos."
+    },
+    "map": {
+      "title": "Ubicación",
+      "subtitle": "Polanco · CDMX",
+      "iframeTitle": "Mapa digital de CentroMédicoAvanza"
+    }
+  },
+  "about": {
+    "images": {
+      "medicalProfessionalAlt": "Especialista de la salud"
+    },
+    "whyChooseUs": {
+      "title": "Donde el buen servicio da tranquilidad",
+      "description1": "En el área médica no se pueden cometer errores. Cada producto, material y accesorio utilizado influye directo en la mejora, efectividad y opinión del paciente.",
+      "description2": "Somos un grupo enfocado en proveer herramientas clínicas y médicas, orientados a brindar respuestas confiables que se adaptan bien en hospitales, clínicas y consultorios.",
+      "description3": "Nuestra meta va más allá de vender: queremos ser un apoyo de confianza para nuestros clientes, facilitando su trabajo de cada día con artículos de excelente calidad.",
+      "button": "Pedir asesoría de un técnico"
+    },
+    "hero": {
+      "badge": "Certificación que respalda cada uno de nuestros artículos",
+      "title": "Certificación que respalda cada uno de nuestros artículos",
+      "description1": "Trabajamos como distribuidores dedicados a entregar materiales para hospital y diagnóstico, elegidos bajo altas reglas de duración y funcionamiento.",
+      "description2": "Sabemos lo importante que es tener herramientas seguras en lugares donde el tiempo es clave. Por eso, basamos nuestro trabajo en:",
+      "button": "Ir al Catálogo"
+    },
+    "strategicPartner": {
+      "title": "Más que un simple vendedor, queremos ser tu socio de confianza.",
+      "description1": "Razones para elegirnos: Muy pocas empresas conocen las necesidades del sector salud. Nosotros sí.",
+      "description2": "Revisión experta de equipos: Elegimos solo materiales que cumplen por completo con las reglas de uso y sanidad.",
+      "description3": "Puntualidad en las entregas: Mejoramos las rutas de envío para que recibas tus paquetes a tiempo.",
+      "description4": "Apoyo inmediato: Comprendemos las urgencias médicas. Respondemos rápido y de forma efectiva.",
+      "description5": "Lealtad y constancia: Creamos lazos a largo plazo basados en la formalidad y el buen servicio.",
+      "button": "Hablar con un Asesor"
+    },
+    "results": {
+      "title": "Nos enfocamos en tus metas, no solo en vender",
+      "description1": "Entendemos que los negocios no solo compran herramientas, sino la seguridad de que su clínica o negocio funcione sin paros, contratiempos ni riesgos.",
+      "description2": "Por esta razón, nuestro trabajo busca dar ventajas reales:",
+      "items": {
+        "item1": "Menos problemas con los envíos",
+        "item2": "Mejor control del inventario propio",
+        "item3": "Seguridad total en el abasto",
+        "item4": "Confianza completa en cada pedido realizado"
+      },
+      "description3": "Nos unimos a tus objetivos diarios para ser un socio que sume de verdad, diferenciándonos de un vendedor común.",
+      "button": "Hablar con un Asesor"
+    },
+    "contact": {
+      "title": "Estamos aquí para servirte",
+      "description1": "Si buscas un proveedor serio, con experiencia en el mercado y formas de entrega rápidas, estás con los indicados.",
+      "phone": "Teléfono de contacto: +52 1 55 2583 6217",
+      "description2": "Atención personalizada para cotizar, dudas sobre equipos y pedidos especiales.",
+      "button": "Escríbenos"
+    }
+  },
+  "customPlan": {
+    "imageAlt": "Emblema",
+    "hero": {
+      "badge": "Sección de Cotizaciones Especiales y Pagos",
+      "title": "Sección de Cotizaciones Especiales y Pagos",
+      "description": "Por favor, entre a este apartado solo si tiene un código de rastreo dado por el equipo de Zenvia."
+    },
+    "authorized": {
+      "title": "Trato Especial Validado",
+      "description": "Los costos colocados en esta parte deben ser exactamente iguales al precio final con impuestos que acordó antes con su asesor."
+    },
+    "form": {
+      "quoteLabel": "Número de Rastreo / Cotización Hecha",
+      "quotePlaceholder": "Por ejemplo: CMA-2026-894",
+      "amountLabel": "Costo Total (Con Impuestos)"
+    },
+    "errors": {
+      "quoteRequired": "Es obligatorio poner el código de cotización que le dio su asesor.",
+      "invalidAmount": "El costo total ingresado debe ser mayor a $0.00 MXN."
+    },
+    "product": {
+      "name": "Pedido Especial - Presupuesto #{quote}",
+      "description": "Materiales médicos revisados antes con el área de ventas bajo el número #{quote}."
+    },
+    "infoText": {
+      "before": "Al presionar el botón de abajo, se agregará un concepto personalizado a tu cesta con el nombre de ",
+      "after": " listo para ser pagado."
+    },
+    "buttons": {
+      "adding": "Agregando concepto especial...",
+      "addToCart": "Agregar a la Bolsa de Compra"
+    }
+  },
+  "store": {
+    "hero": {
+      "badge": "Material para expertos",
+      "title": "Equipo médico aprobado y de gran utilidad",
+      "description": "Vea materiales para el sector salud elegidos por su buen tiempo de vida y confianza para clínicas, hospitales y consultorios."
+    },
+    "filters": {
+      "title": "Filtros de búsqueda",
+      "subtitle": "Divide tus opciones",
+      "clear": "Borrar",
+      "categories": "Secciones",
+      "allCategories": "Todas las especialidades",
+      "priceRange": "Escala de precios",
+      "min": "Mín",
+      "max": "Máx"
+    },
+    "search": {
+      "placeholder": "Buscar materiales, secciones o equipo clínico...",
+      "button": "Buscar"
+    },
+    "sort": {
+      "name": "Orden por letra (A-Z)",
+      "priceAsc": "Costo: de menos a más",
+      "priceDesc": "Costo: de más a menos",
+      "newest": "Productos más nuevos"
+    },
+    "results": {
+      "showing": "Mostrando",
+      "of": "de un total de",
+      "products": "artículos"
+    },
+    "empty": {
+      "title": "No encontramos coincidencias",
+      "description": "Prueba cambiando las palabras de búsqueda o quitando los filtros para ver más opciones.",
+      "button": "Quitar filtros"
+    },
+    "product": {
+      "noImage": "Sin fotografía disponible",
+      "new": "Nuevo",
+      "featured": "Recomendado",
+      "price": "Costo",
+      "viewDetail": "Ver más"
+    },
+    "pagination": {
+      "previous": "Atrás",
+      "next": "Siguiente"
+    },
+    "tax": "MXN + IVA"
+  },
+  "productDetail": {
+    "loadingTitle": "Buscando detalles",
+    "loadingDescription": "Estamos trayendo los datos técnicos de este producto.",
+    "notFoundTitle": "No encontramos el producto",
+    "notFoundDescription": "El material que busca no tiene piezas disponibles o el link que usó está mal.",
+    "backToStore": "Volver al catálogo",
+    "breadcrumbStore": "Catálogo",
+    "noImage": "Foto de ejemplo no disponible",
+    "new": "Nuevo",
+    "featured": "Recomendado",
+    "price": "Costo",
+    "description": "Detalles del producto",
+    "featureQuality": "Respaldo del sector",
+    "featureQualityDesc": "Materiales probados con estrictas revisiones de calidad y reglas de salud.",
+    "featureShipping": "Envío protegido",
+    "featureShippingDesc": "Cuidado y transporte profesional para cuidar el buen estado de cada caja.",
+    "featureSupport": "Atención de expertos",
+    "featureSupportDesc": "Ayuda directa para clínicas, laboratorios y médicos especialistas.",
+    "added": "Agregado correctamente",
+    "addToCart": "Agregar a la bolsa",
+    "cartQuantityText": "Llevas",
+    "cartQuantityUnits": "pieza(s) de este artículo en tu bolsa.",
+    "relatedTitle": "Productos recomendados",
+    "relatedDescription": "Otras alternativas de la misma sección de materiales.",
+    "viewAll": "Ver todo el inventario",
+    "noRelatedTitle": "Sin opciones del mismo tipo",
+    "noRelatedDescription": "Por ahora no tenemos otros artículos en esta categoría.",
+    "viewDetail": "Ver más datos",
+    "tax": "MXN + IVA"
+  },
+  "home": {
+    "hero": {
+      "title": "Donde el trabajo experto da tranquilidad",
+      "description": "Somos una firma dedicada a la venta de equipos médicos y de hospital, certificados mediante rigurosas pruebas de calidad y uso.",
+      "imageAlt": "Especialista de la salud mujer"
+    },
+    "products": {
+      "title": "Calidad comprobada en cada artículo",
+      "description": "Materiales médicos y de cirugía elegidos detalladamente por su buen uso y altas normas.",
+      "button": "Ver Catálogo"
+    },
+    "payment": {
+      "title": "Pagos a la medida",
+      "description": "Ciertos materiales necesitan un presupuesto especial debido a su tipo, cantidad de compra o acuerdos particulares.",
+      "contactButton": "Escríbenos",
+      "payButton": "Pagar",
+      "imageAlt": "Personal de soporte técnico"
+    },
+    "contact": {
+      "title": "Estamos listos para ayudarte",
+      "description": "Si requieres un distribuidor formal, con trato profesional y tiempos de envío rápidos, cuentas con nosotros.",
+      "phoneDescription": "Línea de servicio para pedir costos, guía técnica y soporte postventa.",
+      "button": "Escríbenos",
+      "imageAlt": "Médico de turno"
+    }
+  },
+  "features": {
+    "badge": "Opciones de salud de nivel experto",
+    "title": "Los equipos que te ofrecemos",
+    "description": "Tenemos una lista de productos armada para cumplir con las distintas necesidades del trabajo médico diario.",
+    "subtitle": "Nuestros materiales sirven para:",
+    "items": [
+      "Ayudar en las labores médicas y el control diario",
+      "Asegurar un estado limpio, seguro y de monitoreo",
+      "Hacer más rápido el trabajo de médicos y enfermeros",
+      "Mejorar los tiempos de atención y cuidado de los pacientes"
+    ],
+    "footer": "Cada pieza fue pensada para unirse de forma fácil a tus labores de todos los días."
+  },
+  "footer": {
+    "title": "Escríbenos",
+    "address": {
+      "title": "Oficina principal",
+      "line1": "Avenida Jaime Balmes 11,",
+      "line2": "Depto 15A Edificio A Piso 1",
+      "line3": "Colonia Polanco I Sección, Alcaldía Miguel Hidalgo",
+      "line4": "Código Postal 11510, Ciudad de México"
+    },
+    "support": {
+      "title": "Atención a clientes",
+      "phone": "Conmutador",
+      "email": "Correo electrónico",
+      "description": "Contacto directo para presupuestos, ayuda técnica y estado de tus pedidos."
+    },
+    "payments": {
+      "title": "Formas de pago permitidas"
+    },
+    "legal": {
+      "terms": "Reglas de Uso y Compra de Productos Médicos",
+      "privacy": "Aviso de Cuidado de Datos Personales",
+      "returns": "Reglas de Devolución, Cancelación y Reembolso"
+    },
+    "copyright": "2026 © Todos los derechos son de Zenvia"
+  }
+}

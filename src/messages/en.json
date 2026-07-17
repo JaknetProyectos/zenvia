@@ -1,0 +1,376 @@
+{
+  "header": {
+    "logoAlt": "Logo",
+    "titleAlt": "Banner",
+    "cart": "Cart",
+    "openMenu": "Open menu",
+    "closeMenu": "Hide menu",
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "store": "Shop",
+      "contact": "Contact"
+    }
+  },
+  "cartPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "summary": "1. Item List",
+      "shippingPayment": "2. Shipping & Payment"
+    },
+    "success": {
+      "title": "Payment Successful!",
+      "description": "Your payment has been accepted. We have started preparing your medical supplies for shipping.",
+      "paymentReference": "Payment ID:",
+      "paidAmount": "Total Paid:",
+      "transactionStatus": "Order Status:",
+      "approved": "APPROVED",
+      "backToCatalog": "Back to Shop"
+    },
+    "empty": {
+      "title": "Your shopping cart is empty",
+      "description": "No medical items were found in your cart for this session.",
+      "goToStore": "Go to Shop"
+    },
+    "order": {
+      "title": "Items in Your Order",
+      "clear": "Remove Items"
+    },
+    "financial": {
+      "title": "Order Summary",
+      "couponPlaceholder": "Coupon code",
+      "applyCoupon": "Apply",
+      "appliedCoupon": "Discount {code} (-{discount}%)",
+      "remove": "Remove",
+      "couponInvalid": "This coupon code is wrong or has expired.",
+      "subtotal": "Items Total:",
+      "discount": "Discount Applied:",
+      "netTotal": "Final Price:",
+      "tax": "TAX {tax}"
+    },
+    "actions": {
+      "proceedToPayment": "Go to Checkout",
+      "processing": "Checking funds with Keycop...",
+      "payAmount": "Pay {amount}",
+      "backToCart": "Change items / Add coupon"
+    },
+    "errors": {
+      "declined": "The payment was refused by your bank.",
+      "connection": "There was a network error with the payment platform."
+    },
+    "metadata": {
+      "couponApplied": "Coupon code added",
+      "standardSale": "Normal online purchase"
+    },
+    "form": {
+      "buyerTitle": "Customer / Billing Info",
+      "addressTitle": "Shipping & Delivery Details",
+      "paymentTitle": "Secure Payment Portal",
+      "firstName": "First Name *",
+      "lastName": "Last Name *",
+      "email": "Email Address *",
+      "phone": "Cell Phone (10 digits) *",
+      "company": "Company / Clinic or Hospital Name (Optional)",
+      "streetAddress": "Street Name, Exterior & Interior Number *",
+      "streetAddressPlaceholder": "Av. Universidad 450, Apt 4",
+      "neighborhood": "Neighborhood / References (Optional)",
+      "neighborhoodPlaceholder": "Vertiz Narvarte Neighborhood",
+      "city": "City or Town *",
+      "state": "State *",
+      "statePlaceholder": "Mexico City",
+      "postalCode": "Zip Code *",
+      "country": "Country",
+      "mexico": "Mexico (MX)",
+      "cardNumber": "Card Number (Visa / Mastercard) *",
+      "cardNumberPlaceholder": "4152 0000 0000 0000",
+      "cardHolderName": "Name on Card *",
+      "cardHolderPlaceholder": "As it appears printed on the card",
+      "expiryMonth": "Expiration Month (MM) *",
+      "expiryMonthPlaceholder": "05",
+      "expiryYear": "Expiration Year (YYYY) *",
+      "expiryYearPlaceholder": "2029",
+      "cvv": "Security Code (CVV) *",
+      "cvvPlaceholder": "•••"
+    },
+    "security": {
+      "note": "Safe and Protected Checkout"
+    },
+    "images": {
+      "octanoAlt": "Keycop",
+      "securePaymentAlt": "Safe payment"
+    }
+  },
+  "contactPage": {
+    "hero": {
+      "title": "Let us find the right option for your clinic.",
+      "description": "Our team is here to help you with prices, technical help, stock info, and great service for your workplace."
+    },
+    "info": {
+      "visit": {
+        "title": "Visit Our Office",
+        "subtitle": "Main Office",
+        "address1": "Avenida Jaime Balmes 11,",
+        "address2": "Apt 15A Building A Floor 1",
+        "address3": "Colonia Polanco 1st Section",
+        "address4": "Miguel Hidalgo Area",
+        "address5": "Zip Code 11510, CDMX"
+      },
+      "call": {
+        "title": "By Phone",
+        "subtitle": "Personal support"
+      },
+      "email": {
+        "title": "By Email",
+        "subtitle": "Fast answers"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "Tell us what you need and our team will get back to you with a price quote or the help you need.",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Type your name",
+      "email": "Email address",
+      "emailPlaceholder": "user@email.com",
+      "message": "Message",
+      "messagePlaceholder": "How can we help you today?",
+      "submit": "Send Info",
+      "sending": "Sending message..."
+    },
+    "success": {
+      "title": "Information sent!",
+      "description": "Thank you for writing to us. Our team will read your message and reply very soon."
+    },
+    "errors": {
+      "unexpected": "An unexpected error occurred while sending your info."
+    },
+    "map": {
+      "title": "Our Location",
+      "subtitle": "Polanco · Mexico City",
+      "iframeTitle": "Online map of CentroMédicoAvanza"
+    }
+  },
+  "about": {
+    "images": {
+      "medicalProfessionalAlt": "Medical worker"
+    },
+    "whyChooseUs": {
+      "title": "Where great service gives you confidence",
+      "description1": "In the health sector, there is no room for mistakes. Every material, tool, and product used directly affects patient recovery, efficiency, and medical results.",
+      "description2": "We are a team focused on selling clinical and medical tools, working to give safe choices that fit well in hospitals, clinics, and doctor offices.",
+      "description3": "Our goal is much more than just selling: we want to be a trusted support for our buyers, making their daily work easier with high-quality products.",
+      "button": "Ask for technical help"
+    },
+    "hero": {
+      "badge": "Certification that proves the quality of our products",
+      "title": "Certification that proves the quality of our products",
+      "description1": "We work as suppliers dedicated to selling hospital and medical items, chosen under strict rules of durability and performance.",
+      "description2": "We know how important it is to have safe tools in emergencies where time is vital. For this reason, we base our work on:",
+      "button": "Go to Shop"
+    },
+    "strategicPartner": {
+      "title": "More than just a vendor, we want to be your trusted partner.",
+      "description1": "Why choose us: Very few companies understand the needs of the medical field. We really do.",
+      "description2": "Careful selection of tools: We only sell items that meet all safety and health rules.",
+      "description3": "Focus on fast delivery: We improve our shipping paths so you get your orders right on time.",
+      "description4": "Quick support response: We understand medical emergencies. We act fast and effectively.",
+      "description5": "Trust and consistency: We build long-term relationships based on honesty and good quality.",
+      "button": "Speak with an Expert"
+    },
+    "results": {
+      "title": "We focus on your goals, not just making sales",
+      "description1": "We understand that clinics do not just buy tools, but the peace of mind that their facility will run smoothly, without stops and safely.",
+      "description2": "For this reason, our service aims to provide real benefits:",
+      "items": {
+        "item1": "Fewer shipping and delivery problems",
+        "item2": "Better control of your internal stock",
+        "item3": "Total certainty in your supply supply",
+        "item4": "Full confidence in every order you make"
+      },
+      "description3": "We line up with your daily goals to be a partner that adds real value, differing from a standard supplier.",
+      "button": "Speak with an Expert"
+    },
+    "contact": {
+      "title": "We are ready to assist you",
+      "description1": "If you are looking for a serious supplier with good technical knowledge and fast shipping, you are in the right place.",
+      "phone": "Direct phone line: +52 1 55 2583 6217",
+      "description2": "Dedicated phone line for price quotes, general questions, and orders.",
+      "button": "Contact Us"
+    }
+  },
+  "customPlan": {
+    "imageAlt": "Logo",
+    "hero": {
+      "badge": "Special Quotes and Payments Page",
+      "title": "Special Quotes and Payments Page",
+      "description": "Please use this section only if you have a reference code given by a Zenvia agent."
+    },
+    "authorized": {
+      "title": "Special Agreement Approved",
+      "description": "The prices entered here must match exactly the final total price you agreed on with your agent."
+    },
+    "form": {
+      "quoteLabel": "Reference Number / Official Quote Code",
+      "quotePlaceholder": "for example: CMA-2026-894",
+      "amountLabel": "Total Price (Tax Included)"
+    },
+    "errors": {
+      "quoteRequired": "It is necessary to enter the quote code given by your advisor.",
+      "invalidAmount": "The total amount entered must be higher than $0.00 MXN."
+    },
+    "product": {
+      "name": "Special Order - Quote #{quote}",
+      "description": "Medical items agreed upon earlier with the sales team under the code #{quote}."
+    },
+    "infoText": {
+      "before": "By clicking the button below, a custom item will be added to your cart with the name ",
+      "after": " ready for payment."
+    },
+    "buttons": {
+      "adding": "Adding custom item...",
+      "addToCart": "Add to Shopping Cart"
+    }
+  },
+  "store": {
+    "hero": {
+      "badge": "Medical supply shop",
+      "title": "Approved medical tools with high efficiency",
+      "description": "See medical items chosen for their durability and safety for hospitals, clinics, and doctor offices."
+    },
+    "filters": {
+      "title": "Search filters",
+      "subtitle": "Filter your choices",
+      "clear": "Clear",
+      "categories": "Categories",
+      "allCategories": "All categories",
+      "priceRange": "Price limits",
+      "min": "Min",
+      "max": "Max"
+    },
+    "search": {
+      "placeholder": "Search for medical items, categories, or tools...",
+      "button": "Search"
+    },
+    "sort": {
+      "name": "Alphabetical order (A-Z)",
+      "priceAsc": "Price: low to high",
+      "priceDesc": "Price: high to low",
+      "newest": "Newest arrivals"
+    },
+    "results": {
+      "showing": "Showing",
+      "of": "out of a total of",
+      "products": "available items"
+    },
+    "empty": {
+      "title": "No results found",
+      "description": "Try changing your search words or clearing the filters to see more options.",
+      "button": "Reset filters"
+    },
+    "product": {
+      "noImage": "No photo available",
+      "new": "New",
+      "featured": "Featured",
+      "price": "Price",
+      "viewDetail": "View Item"
+    },
+    "pagination": {
+      "previous": "Back",
+      "next": "Next"
+    },
+    "tax": "MXN + TAX"
+  },
+  "productDetail": {
+    "loadingTitle": "Loading details",
+    "loadingDescription": "We are gathering the technical data for this item.",
+    "notFoundTitle": "Item not found",
+    "notFoundDescription": "The item you want is out of stock or the link you clicked is wrong.",
+    "backToStore": "Back to shop",
+    "breadcrumbStore": "Shop",
+    "noImage": "Sample photo not available",
+    "new": "New",
+    "featured": "Featured",
+    "price": "Price",
+    "description": "Product specifications",
+    "featureQuality": "Medical backing",
+    "featureQualityDesc": "Items checked through strict quality controls and health regulations.",
+    "featureShipping": "Safe shipping",
+    "featureShippingDesc": "Professional packing and transport to keep every box safe.",
+    "featureSupport": "Expert help",
+    "featureSupportDesc": "Direct assistance for clinics, laboratories, and medical experts.",
+    "added": "Added successfully to your order",
+    "addToCart": "Add to cart",
+    "cartQuantityText": "You have chosen",
+    "cartQuantityUnits": "unit(s) of this item in your shopping cart.",
+    "relatedTitle": "Suggested products",
+    "relatedDescription": "Other choices from the same category of items.",
+    "viewAll": "See all stock",
+    "noRelatedTitle": "No similar items available",
+    "noRelatedDescription": "At this moment, we do not have other products in this category.",
+    "viewDetail": "See details",
+    "tax": "MXN + TAX"
+  },
+  "home": {
+    "hero": {
+      "title": "Where expert service builds trust",
+      "description": "We are a company focused on selling medical and hospital items, approved through strict quality and performance tests.",
+      "imageAlt": "Female medical specialist"
+    },
+    "products": {
+      "title": "Quality proven in every item",
+      "description": "Medical and surgical supplies carefully chosen for their performance and high standards.",
+      "button": "Go to Shop"
+    },
+    "payment": {
+      "title": "Custom payments",
+      "description": "Some equipment needs a personalized budget due to its type, purchase size, or special terms.",
+      "contactButton": "Contact Us",
+      "payButton": "Pay Now",
+      "imageAlt": "Technical support team"
+    },
+    "contact": {
+      "title": "We are ready to help you",
+      "description": "If you need a serious distributor with technical knowledge and fast delivery times, you can rely on us.",
+      "phoneDescription": "Direct phone line to ask for prices, guidance, and post-sale support.",
+      "button": "Contact Us",
+      "imageAlt": "Medical doctor on duty"
+    }
+  },
+  "features": {
+    "badge": "Specialized health options",
+    "title": "The tools we offer you",
+    "description": "We have a catalog made to cover the different needs in daily medical work.",
+    "subtitle": "Our supplies focus on:",
+    "items": [
+      "Supporting health tasks and daily organization",
+      "Ensuring clean, safe, and monitoring conditions",
+      "Making the work of doctors and nurses faster",
+      "Improving reaction times and patient care"
+    ],
+    "footer": "Every item is built to fit easily into your daily work routines."
+  },
+  "footer": {
+    "title": "Contact us",
+    "address": {
+      "title": "Main Office",
+      "line1": "Avenida Jaime Balmes 11,",
+      "line2": "Apt 15A Building A Floor 1",
+      "line3": "Colonia Polanco 1st Section, Miguel Hidalgo Area",
+      "line4": "Zip Code 11510, Mexico City"
+    },
+    "support": {
+      "title": "Customer Care",
+      "phone": "Phone line",
+      "email": "Email address",
+      "description": "Direct communication lines for price quotes, technical support, and order tracking."
+    },
+    "payments": {
+      "title": "Accepted Payment Methods"
+    },
+    "legal": {
+      "terms": "Terms of Use and Purchase of Medical Products",
+      "privacy": "Personal Data Privacy Notice",
+      "returns": "Returns, Cancellations, and Refunds Policy"
+    },
+    "copyright": "2026 © All rights reserved by Zenvia"
+  }
+}
