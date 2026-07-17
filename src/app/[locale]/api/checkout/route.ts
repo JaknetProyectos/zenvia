@@ -1,5 +1,7 @@
+// app/api/checkout-confirm/route.ts
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getTranslations } from "next-intl/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -26,6 +28,7 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const {
+      locale,
       orderId,
       amount,
       customer,
@@ -48,6 +51,9 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+
+    // Cargar traducciones con el locale recibido
+    const t = await getTranslations({ locale, namespace: 'Emails' });
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +92,7 @@ export async function POST(req: Request) {
                 color: #71717a;
               "
             >
-              ${formatCurrency(item.product.price)} c/u
+              ${formatCurrency(item.product.price)} ${t('checkout.perUnit')}
             </div>
           </td>
 
@@ -170,7 +176,7 @@ export async function POST(req: Request) {
                 margin-bottom: 16px;
               "
             >
-              Confirmación de Pedido
+              ${t('checkout.badgeLabel')}
             </div>
 
             <h1
@@ -183,7 +189,7 @@ export async function POST(req: Request) {
                 letter-spacing: -0.02em;
               "
             >
-              ¡Gracias por tu compra!
+              ${t('checkout.customerTitle')}
             </h1>
 
             <p
@@ -194,7 +200,7 @@ export async function POST(req: Request) {
                 color: #52525b;
               "
             >
-              Tu orden ha sido procesada con éxito. A continuación encontrarás el resumen detallado de tu transacción.
+              ${t('checkout.customerDescription')}
             </p>
             
             <div style="margin-top: 32px; border-bottom: 1px solid #e4e4e7;"></div>
@@ -219,7 +225,7 @@ export async function POST(req: Request) {
                   color: #a1a1aa;
                 "
               >
-                Zenvia &copy; 2026. Todos los derechos reservados.
+                ${t('checkout.footerCopyright')}
               </p>
             </div>
           </td>
@@ -238,7 +244,7 @@ export async function POST(req: Request) {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Confirmación de Compra</title>
+          <title>${t('checkout.customerEmailTitle')}</title>
         </head>
         <body
           style="
@@ -276,17 +282,17 @@ export async function POST(req: Request) {
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td style="padding-bottom: 8px;">
-                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.05em;">Cliente</span>
+                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.05em;">${t('checkout.customerLabel')}</span>
                             <div style="font-size: 16px; font-weight: 600; color: #18181b; margin-top: 4px;">${escapeHtml(customer.nombre)}</div>
                           </td>
                           <td align="right" style="padding-bottom: 8px; vertical-align: top;">
-                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.05em;">No. de Orden</span>
+                            <span style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.05em;">${t('checkout.orderNumberLabel')}</span>
                             <div style="font-size: 16px; font-weight: 700; color: #18181b; margin-top: 4px;">#${escapeHtml(orderId)}</div>
                           </td>
                         </tr>
                       </table>
                       <p style="margin: 20px 0 0 0; font-size: 14px; line-height: 1.6; color: #52525b;">
-                        Tu compra ya fue validada y enviada al área de preparación y distribución.
+                        ${t('checkout.customerOrderStatus')}
                       </p>
                     </td>
                   </tr>
@@ -294,14 +300,14 @@ export async function POST(req: Request) {
                   <tr>
                     <td style="padding: 0 40px 24px 40px;">
                       <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #18181b; letter-spacing: 0.05em; margin-bottom: 8px;">
-                        Artículos Adquiridos
+                        ${t('checkout.itemsPurchased')}
                       </div>
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <thead>
                           <tr>
-                            <th align="left" style="padding: 8px 0; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">Producto</th>
-                            <th align="center" style="padding: 8px 0; width: 60px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">Cant.</th>
-                            <th align="right" style="padding: 8px 0; width: 100px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">Subtotal</th>
+                            <th align="left" style="padding: 8px 0; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">${t('checkout.productColumn')}</th>
+                            <th align="center" style="padding: 8px 0; width: 60px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">${t('checkout.quantityColumn')}</th>
+                            <th align="right" style="padding: 8px 0; width: 100px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">${t('checkout.subtotalColumn')}</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -325,12 +331,12 @@ export async function POST(req: Request) {
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                               <tr>
                                 <td>
-                                  <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.05em; margin-bottom: 4px;">Total Liquidado</div>
+                                  <div style="font-size: 12px; font-weight: 600; text-transform: uppercase; color: #71717a; letter-spacing: 0.05em; margin-bottom: 4px;">${t('checkout.totalLabel')}</div>
                                   <div style="font-size: 28px; font-weight: 700; color: #18181b; letter-spacing: -0.02em;">${formatCurrency(amount)}</div>
                                 </td>
                                 <td align="right" style="vertical-align: middle;">
                                   <div style="display: inline-block; background: #e4e4e7; border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 600; color: #18181b;">
-                                    Pago Confirmado
+                                    ${t('checkout.paymentConfirmed')}
                                   </div>
                                 </td>
                               </tr>
@@ -345,7 +351,7 @@ export async function POST(req: Request) {
                     <td style="padding: 0 40px 32px 40px;">
                       <div style="background: #ffffff; border: 1px solid #e4e4e7; border-radius: 12px; padding: 20px 24px;">
                         <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #18181b; letter-spacing: 0.05em; margin-bottom: 8px;">
-                          Dirección de Entrega
+                          ${t('checkout.shippingAddress')}
                         </div>
                         <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #52525b;">
                           ${escapeHtml(customer.direccion)}
@@ -378,7 +384,7 @@ export async function POST(req: Request) {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Notificación de Venta</title>
+          <title>${t('checkout.businessEmailTitle')}</title>
         </head>
         <body
           style="
@@ -427,13 +433,13 @@ export async function POST(req: Request) {
                           margin-bottom: 16px;
                         "
                       >
-                        Venta Ecommerce
+                        ${t('checkout.businessBadge')}
                       </div>
                       <h2 style="margin: 0 0 12px 0; font-size: 24px; font-weight: 700; color: #18181b; letter-spacing: -0.02em;">
-                        Nueva venta registrada
+                        ${t('checkout.businessTitle')}
                       </h2>
                       <p style="margin: 0; font-size: 14px; line-height: 1.6; color: #52525b;">
-                        Se ha recibido y confirmado el pago de la orden <strong>#${escapeHtml(orderId)}</strong>. Por favor, procede con la preparación del envío correspondiente.
+                        ${t('checkout.businessDescription', { orderId: escapeHtml(orderId) })}
                       </p>
                     </td>
                   </tr>
@@ -441,23 +447,23 @@ export async function POST(req: Request) {
                   <tr>
                     <td style="padding: 0 40px 24px 40px;">
                       <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #18181b; letter-spacing: 0.05em; margin-bottom: 8px;">
-                        Detalle del Cliente y Entrega
+                        ${t('checkout.businessCustomerDetails')}
                       </div>
                       <div style="background: #ffffff; border: 1px solid #e4e4e7; border-radius: 12px; padding: 20px 24px;">
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom: 16px;">
                           <tr>
                             <td>
-                              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #71717a;">Nombre del Cliente</div>
+                              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #71717a;">${t('checkout.businessCustomerName')}</div>
                               <div style="font-size: 14px; font-weight: 600; color: #18181b; margin-top: 2px;">${escapeHtml(customer.nombre)}</div>
                             </td>
                             <td align="right">
-                              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #71717a;">Email de Contacto</div>
-                              <div style="font-size: 14px; font-weight: 600; color: #18181b; margin-top: 2px;">${escapeHtml(customer.email || "No provisto")}</div>
+                              <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #71717a;">${t('checkout.businessContactEmail')}</div>
+                              <div style="font-size: 14px; font-weight: 600; color: #18181b; margin-top: 2px;">${escapeHtml(customer.email || t('checkout.businessNotProvided'))}</div>
                             </td>
                           </tr>
                         </table>
                         <div style="border-top: 1px solid #e4e4e7; padding-top: 16px;">
-                          <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #71717a; margin-bottom: 4px;">Destino de Envío</div>
+                          <div style="font-size: 11px; font-weight: 600; text-transform: uppercase; color: #71717a; margin-bottom: 4px;">${t('checkout.businessShippingDestination')}</div>
                           <div style="font-size: 14px; line-height: 1.5; color: #52525b;">
                             ${escapeHtml(customer.direccion)}
                             ${customer.direccion2 ? `, ${escapeHtml(customer.direccion2)}` : ""}
@@ -472,14 +478,14 @@ export async function POST(req: Request) {
                   <tr>
                     <td style="padding: 0 40px 24px 40px;">
                       <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #18181b; letter-spacing: 0.05em; margin-bottom: 8px;">
-                        Resumen de Productos
+                        ${t('checkout.businessProductSummary')}
                       </div>
                       <table width="100%" border="0" cellspacing="0" cellpadding="0">
                         <thead>
                           <tr>
-                            <th align="left" style="padding: 8px 0; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">Producto</th>
-                            <th align="center" style="padding: 8px 0; width: 60px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">Cant.</th>
-                            <th align="right" style="padding: 8px 0; width: 100px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">Subtotal</th>
+                            <th align="left" style="padding: 8px 0; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">${t('checkout.productColumn')}</th>
+                            <th align="center" style="padding: 8px 0; width: 60px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">${t('checkout.quantityColumn')}</th>
+                            <th align="right" style="padding: 8px 0; width: 100px; font-size: 12px; font-weight: 500; color: #71717a; border-bottom: 1px solid #e4e4e7;">${t('checkout.subtotalColumn')}</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -503,12 +509,12 @@ export async function POST(req: Request) {
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                               <tr>
                                 <td>
-                                  <div style="font-size: 12px; font-weight: 500; text-transform: uppercase; color: #a1a1aa; letter-spacing: 0.05em; margin-bottom: 4px;">Total Cobrado</div>
+                                  <div style="font-size: 12px; font-weight: 500; text-transform: uppercase; color: #a1a1aa; letter-spacing: 0.05em; margin-bottom: 4px;">${t('checkout.businessTotalCollected')}</div>
                                   <div style="font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: -0.02em;">${formatCurrency(amount)}</div>
                                 </td>
                                 <td align="right" style="vertical-align: middle;">
                                   <div style="display: inline-block; background: #27272a; border: 1px solid #3f3f46; border-radius: 6px; padding: 6px 12px; font-size: 12px; font-weight: 600; color: #ffffff;">
-                                    Fondos Asegurados
+                                    ${t('checkout.businessFundsSecured')}
                                   </div>
                                 </td>
                               </tr>
@@ -537,14 +543,14 @@ export async function POST(req: Request) {
     await resend.emails.send({
       from: "Zenvia <hello@zenvia.com.mx>",
       to: [customer.email],
-      subject: `Confirmación de tu Orden #${orderId} - Zenvia`,
+      subject: t('checkout.customerSubject', { orderId }),
       html: htmlCliente,
     });
 
     await resend.emails.send({
       from: "Notificaciones Zenvia <hello@zenvia.com.mx>",
       to: ["hello@zenvia.com.mx", customer.email],
-      subject: `🚨 NUEVA VENTA - Orden #${orderId}`,
+      subject: t('checkout.businessSubject', { orderId }),
       html: htmlNegocio,
     });
 

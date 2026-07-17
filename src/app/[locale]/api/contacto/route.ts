@@ -1,5 +1,7 @@
+// app/api/contacto/route.ts
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getTranslations } from "next-intl/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -18,7 +20,7 @@ function escapeHtml(value: string) {
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { nombre, email, mensaje } = body;
+    const { locale, nombre, email, mensaje } = body;
 
     if (!nombre || !email || !mensaje) {
       return NextResponse.json(
@@ -26,6 +28,9 @@ export async function POST(req: Request) {
         { status: 400 }
       );
     }
+
+    // Cargar traducciones con el locale recibido
+    const t = await getTranslations({ locale, namespace: 'Emails' });
 
     const safeNombre = escapeHtml(String(nombre));
     const safeEmail = escapeHtml(String(email));
@@ -74,7 +79,7 @@ export async function POST(req: Request) {
                       margin-bottom: 12px;
                     "
                   >
-                    Suministros Médicos Especializados
+                    ${t('contact.companyName')}
                   </div>
 
                   <h1
@@ -88,7 +93,7 @@ export async function POST(req: Request) {
                       text-transform: uppercase;
                     "
                   >
-                    Nuevo mensaje recibido
+                    ${t('contact.businessTitle')}
                   </h1>
 
                   <p
@@ -99,7 +104,7 @@ export async function POST(req: Request) {
                       color: #404040;
                     "
                   >
-                    Notificación del sistema: Se ha registrado un nuevo registro en el formulario de contacto web.
+                    ${t('contact.businessDescription')}
                   </p>
                 </td>
               </tr>
@@ -145,8 +150,8 @@ export async function POST(req: Request) {
                       letter-spacing: 0.02em;
                     "
                   >
-                    Zenvia &copy; 2026. Todos los derechos reservados.<br>
-                    Soporte institucional y clínico: hello@zenvia.com.mx
+                    ${t('contact.footerCopyright')}<br>
+                    ${t('contact.footerSupport')}
                   </p>
                 </td>
               </tr>
@@ -217,7 +222,7 @@ export async function POST(req: Request) {
                               color: #e11d48;
                             "
                           >
-                            Datos del Solicitante
+                            ${t('contact.applicantData')}
                           </p>
                         </div>
 
@@ -240,7 +245,7 @@ export async function POST(req: Request) {
                                   letter-spacing: 0.05em;
                                 "
                               >
-                                Nombre
+                                ${t('contact.nameLabel')}
                               </td>
                               <td
                                 style="
@@ -266,7 +271,7 @@ export async function POST(req: Request) {
                                   letter-spacing: 0.05em;
                                 "
                               >
-                                Email
+                                ${t('contact.emailLabel')}
                               </td>
                               <td
                                 style="
@@ -317,7 +322,7 @@ export async function POST(req: Request) {
                               color: #0056b3;
                             "
                           >
-                            Consulta Médica / Comercial
+                            ${t('contact.messageSectionTitle')}
                           </p>
                         </div>
 
@@ -402,7 +407,7 @@ export async function POST(req: Request) {
                             letter-spacing: -0.01em;
                           "
                         >
-                          Estimado(a) ${safeNombre},
+                          ${t('contact.userGreeting', { name: safeNombre })}
                         </h2>
 
                         <p
@@ -413,7 +418,7 @@ export async function POST(req: Request) {
                             color: #404040;
                           "
                         >
-                          Confirmamos la recepción correcta de su mensaje en nuestra plataforma. Un asesor de nuestro departamento de atención clínica y comercial revisará su solicitud para brindarle una respuesta formal a la brevedad.
+                          ${t('contact.userConfirmation')}
                         </p>
                       </div>
                     </td>
@@ -445,7 +450,7 @@ export async function POST(req: Request) {
                               color: #0056b3;
                             "
                           >
-                            Copia de la información enviada
+                            ${t('contact.userMessageCopy')}
                           </p>
                         </div>
 
@@ -481,13 +486,13 @@ export async function POST(req: Request) {
         from: "Zenvia <hello@zenvia.com.mx>",
         to: ["hello@zenvia.com.mx",email],
         replyTo: email,
-        subject: `Nuevo Mensaje Web: ${nombre}`,
+        subject: t('contact.businessSubject', { name: nombre }),
         html: htmlNegocio,
       }),
       resend.emails.send({
         from: "Zenvia <hello@zenvia.com.mx>",
         to: [email],
-        subject: "Hemos recibido tu mensaje - Zenvia",
+        subject: t('contact.userSubject'),
         html: htmlUsuario,
       }),
     ]);

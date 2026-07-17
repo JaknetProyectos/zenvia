@@ -5,7 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useProducts } from "@/hooks/useProducts";
 import { useCategories } from "@/hooks/useCategories";
 import { ProductFilters } from "@/types/product";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 import {
   Search,
@@ -100,7 +100,7 @@ export default function StorePage() {
         <section className="py-10">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-              
+
               {/* FILTROS LATERALES */}
               <aside className="hidden lg:block">
                 <div className="sticky top-28 border border-black bg-white rounded-none shadow-none">
@@ -147,11 +147,10 @@ export default function StorePage() {
                         <div className="space-y-1">
                           <button
                             onClick={() => handleFilterChange("categorySlug", undefined)}
-                            className={`w-full border text-left px-3 py-2 text-xs font-mono uppercase transition-colors rounded-none ${
-                              !filters.categorySlug
+                            className={`w-full border text-left px-3 py-2 text-xs font-mono uppercase transition-colors rounded-none ${!filters.categorySlug
                                 ? "border-black bg-black text-white"
                                 : "border-gray-300 bg-white text-black hover:bg-gray-50"
-                            }`}
+                              }`}
                           >
                             {t("filters.allCategories")}
                           </button>
@@ -160,11 +159,10 @@ export default function StorePage() {
                             <button
                               key={cat.id}
                               onClick={() => handleFilterChange("categorySlug", cat.slug)}
-                              className={`w-full border text-left px-3 py-2 text-xs font-mono uppercase transition-colors rounded-none ${
-                                filters.categorySlug === cat.slug
+                              className={`w-full border text-left px-3 py-2 text-xs font-mono uppercase transition-colors rounded-none ${filters.categorySlug === cat.slug
                                   ? "border-black bg-[#2563EB] text-white"
                                   : "border-gray-300 bg-white text-black hover:bg-gray-50"
-                              }`}
+                                }`}
                             >
                               {locale === "es" ? cat.name : cat.name_english}
                             </button>
@@ -213,11 +211,11 @@ export default function StorePage() {
 
               {/* CONTENEDOR DE PRODUCTOS */}
               <div className="space-y-6 lg:col-span-3">
-                
+
                 {/* BARRA SUPERIOR DE BÚSQUEDA */}
                 <div className="border border-black bg-white p-4 rounded-none shadow-none">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    
+
                     {/* Buscador */}
                     <form onSubmit={handleSearchSubmit} className="relative w-full sm:max-w-xl">
                       <Search className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
@@ -393,11 +391,10 @@ export default function StorePage() {
                           <button
                             key={pageNum}
                             onClick={() => handleFilterChange("page", pageNum)}
-                            className={`h-9 w-9 border text-xs font-mono font-bold rounded-none transition-colors ${
-                              pagination.page === pageNum
+                            className={`h-9 w-9 border text-xs font-mono font-bold rounded-none transition-colors ${pagination.page === pageNum
                                 ? "border-black bg-[#2563EB] text-white"
                                 : "border-gray-300 bg-white text-black hover:bg-gray-50"
-                            }`}
+                              }`}
                           >
                             {pageNum}
                           </button>

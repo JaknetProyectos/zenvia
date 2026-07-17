@@ -26,7 +26,7 @@ export default function NosotrosPage() {
       <section className="relative bg-gray-100 pt-12 pb-16 border-b border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-stretch gap-0 border border-black bg-white lg:grid-cols-[1.05fr_.95fr]">
-            
+
             {/* CONTENIDO */}
             <div className="p-8 md:p-12 flex flex-col justify-center bg-white order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 border border-black bg-gray-100 px-3 py-1 text-xs font-mono uppercase tracking-wider text-black w-max mb-6">
@@ -63,7 +63,7 @@ export default function NosotrosPage() {
                   priority
                   className="object-cover p-1"
                 />
-                
+
                 {/* Etiqueta Técnica flotante rígida */}
                 <div className="absolute -bottom-2 -left-2 bg-white border border-black px-4 py-3 shadow-none rounded-none">
                   <div className="flex items-center gap-3">
@@ -86,7 +86,7 @@ export default function NosotrosPage() {
       <section className="py-12 bg-white border-b border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-stretch gap-0 border border-black bg-white xl:grid-cols-[.9fr_1.1fr]">
-            
+
             {/* IMAGEN */}
             <div className="relative min-h-[350px] bg-gray-100 border-b xl:border-b-0 xl:border-r border-black">
               <Image
@@ -114,10 +114,12 @@ export default function NosotrosPage() {
               </div>
 
               <div className="pt-8">
-                <Button className="rounded-none bg-black px-6 py-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#2563EB] transition-colors shadow-none">
-                  {t("whyChooseUs.button")}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href={"/contacto"}>
+                  <Button className="rounded-none bg-black px-6 py-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#2563EB] transition-colors shadow-none">
+                    {t("whyChooseUs.button")}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -129,7 +131,7 @@ export default function NosotrosPage() {
       <section className="py-12 bg-gray-50 border-b border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-stretch gap-0 border border-black bg-white lg:grid-cols-2">
-            
+
             {/* CONTENIDO */}
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-white order-2 lg:order-1">
               <div className="w-10 h-10 border border-black bg-gray-100 flex items-center justify-center mb-6 text-[#2563EB]">
@@ -149,10 +151,12 @@ export default function NosotrosPage() {
               </div>
 
               <div className="pt-8">
-                <Button className="rounded-none bg-[#2563EB] px-6 py-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-black transition-colors shadow-none">
-                  {t("strategicPartner.button")}
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <Link href={"/contacto"}>
+                  <Button className="rounded-none bg-[#2563EB] px-6 py-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-black transition-colors shadow-none">
+                    {t("strategicPartner.button")}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -176,7 +180,7 @@ export default function NosotrosPage() {
       <section className="py-12 bg-white border-b border-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid items-stretch gap-0 border border-black bg-white lg:grid-cols-[1fr_.9fr]">
-            
+
             {/* CONTENIDO */}
             <div className="p-8 md:p-12 bg-white flex flex-col justify-center border-b lg:border-b-0 lg:border-r border-black">
               <h2 className="text-2xl md:text-4xl font-black text-black uppercase tracking-tight mb-6 border-l-4 border-[#2563EB] pl-4">
@@ -204,10 +208,12 @@ export default function NosotrosPage() {
                 {t("results.description3")}
               </p>
 
-              <Button className="rounded-none bg-black px-6 py-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#2563EB] transition-colors shadow-none w-max">
-                {t("results.button")}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <Link href={"/contacto"}>
+                <Button className="rounded-none bg-black px-6 py-5 text-xs font-bold uppercase tracking-wider text-white hover:bg-[#2563EB] transition-colors shadow-none w-max">
+                  {t("results.button")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
 
             {/* IMAGEN CORTE RETÍCULA */}

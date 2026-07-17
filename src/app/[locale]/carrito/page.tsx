@@ -224,6 +224,7 @@ export default function CarritoCheckoutPage() {
               customer: paymentPayload.customer,
               items,
               metadata: paymentPayload.metadata,
+              locale
             }),
           });
         } catch (emailError) {
